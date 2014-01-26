@@ -13,7 +13,7 @@ public class A extends BaseLockableActivity {
         t.setText("launch B");
 
         t = (TextView) findViewById(R.id.text);
-        t.setText("A");
+        t.setText("Page A");
     }
 
     public void onAction(View v) {

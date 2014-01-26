@@ -1,20 +1,25 @@
 package com.bwzz.applockdemo;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 public class Guard extends Activity {
+
+    private int count = 4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.button);
         TextView t = (TextView) findViewById(R.id.button);
-        t.setText("Tap to uanlock");
+        t.setText("Click me to unlock it");
 
         t = (TextView) findViewById(R.id.text);
-        t.setText("Guard");
+        t.setText("This is the lock page");
+        t.setTextColor(Color.RED);
     }
 
     @Override
@@ -25,7 +30,14 @@ public class Guard extends Activity {
     }
 
     public void onAction(View v) {
-        unlock();
+        if (count <= 1) {
+            unlock();
+        } else {
+            --count;
+            TextView t = (TextView) findViewById(R.id.button);
+            t.setText(String.valueOf(count));
+            t.setTextSize(30);
+        }
     }
 
     private void unlock() {

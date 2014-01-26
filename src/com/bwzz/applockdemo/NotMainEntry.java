@@ -13,7 +13,7 @@ public class NotMainEntry extends BaseLockableActivity {
         t.setText("launch A");
 
         t = (TextView) findViewById(R.id.text);
-        t.setText("Entry");
+        t.setText("Not Main Entry");
     }
 
     public void onAction(View v) {

@@ -10,14 +10,14 @@ public class B extends BaseLockableActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.button);
         TextView t = (TextView) findViewById(R.id.button);
-        t.setText("launch Guard");
+        t.setText("nothing");
 
         t = (TextView) findViewById(R.id.text);
-        t.setText("B");
+        t.setText("Page B\n\n\nPress Home button, wait 2 seconds, up this app");
     }
 
     public void onAction(View v) {
-        call(Guard.class);
+//        call(Guard.class);
     }
 
 }

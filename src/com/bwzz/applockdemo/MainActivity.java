@@ -14,7 +14,7 @@ public class MainActivity extends BaseLockableActivity {
         TextView t = (TextView) findViewById(R.id.button);
         t.setText("launch A");
         t = (TextView) findViewById(R.id.text);
-        t.setText("Main");
+        t.setText("Page Main Entry\n\n\nClik a hyperlink in other app to launch the Page NotMain Entry");
     }
 
     @Override
